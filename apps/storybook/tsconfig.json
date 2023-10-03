@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Storybook",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "declarationMap": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "inlineSources": false,
+    "strict": true,
+    "preserveSymlinks": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "baseUrl": "../../",
+    "rootDir": "../../",
+    "outDir": "../../dist/out-tsc",
+    "types": ["node"],
+    "paths": {
+      "app/*": ["packages/app/*"],
+      "@my/ui/*": ["packages/ui/*"]
+    },
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true
+  },
+  "include": [".storybook/*", "tamagui.config.ts"],
+  // "references": [
+  //   {
+  //     "path": "../../packages/ui"
+  //   },
+  //   {
+  //     "path": "../../packages/app"
+  //   }
+  // ]
+}
